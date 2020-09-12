@@ -29,7 +29,7 @@ class AreaSelector {
             this.dimensions = undefined;
         }
     }
-    convertToElement() {
+    createElement() {
         if (this.active) {
             state.elements.database.push(new Element(this.coordinates.topLeftCorner, this.dimensions));
             this.end();
@@ -51,7 +51,7 @@ class AreaSelector {
                     state.cursor.coordinate.x,
                     state.cursor.coordinate.y
                 )
-                this.dimensions = new Dimension(
+                this.dimensions = new Dimensions(
                     this.coordinates.origin.x - state.cursor.coordinate.x,
                     this.coordinates.origin.y - state.cursor.coordinate.y
                 )
@@ -61,7 +61,7 @@ class AreaSelector {
                     this.coordinates.origin.x,
                     state.cursor.coordinate.y
                 )
-                this.dimensions = new Dimension(
+                this.dimensions = new Dimensions(
                     state.cursor.coordinate.x - this.coordinates.origin.x,
                     this.coordinates.origin.y - state.cursor.coordinate.y
                 )
@@ -73,7 +73,7 @@ class AreaSelector {
                     state.cursor.coordinate.x,
                     this.coordinates.origin.y
                 )
-                this.dimensions = new Dimension(
+                this.dimensions = new Dimensions(
                     this.coordinates.origin.x - state.cursor.coordinate.x,
                     state.cursor.coordinate.y - this.coordinates.origin.y
                 )
@@ -83,7 +83,7 @@ class AreaSelector {
                     this.coordinates.origin.x,
                     this.coordinates.origin.y
                 )
-                this.dimensions = new Dimension(
+                this.dimensions = new Dimensions(
                     state.cursor.coordinate.x - this.coordinates.origin.x,
                     state.cursor.coordinate.y - this.coordinates.origin.y
                 )
