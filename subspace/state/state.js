@@ -1,4 +1,0 @@
-var state = {
-    elements: lol,
-    
-}

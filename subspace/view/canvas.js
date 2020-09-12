@@ -1,8 +1,9 @@
 function setup() {
     const canvas = createCanvas(windowWidth, windowHeight);
-    background(30, 30, 30);
 }
 
 function draw() {
-    
+    background(30, 30, 30);
+    state.cursor.updateCoordinate();
+    state.areaSelector.on();
 }
