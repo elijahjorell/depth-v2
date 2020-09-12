@@ -8,8 +8,10 @@ class AreaSelector {
         this.dimensions = undefined;
     }
     start() {
-        this.active = true;
-        this.coordinates.origin = state.cursor.coordinate;
+        if (!this.active) {
+            this.active = true;
+            this.coordinates.origin = state.cursor.coordinate;
+        }
     }
     on() {
         if (this.active) {
@@ -18,12 +20,20 @@ class AreaSelector {
         }
     }
     end() {
-        this.active = false;
-        this.coordinates = {
-            origin: undefined,
-            topLeftCorner: undefined
-        };
-        this.dimensions = undefined;
+        if (this.active) {
+            this.active = false;
+            this.coordinates = {
+                origin: undefined,
+                topLeftCorner: undefined
+            };
+            this.dimensions = undefined;
+        }
+    }
+    convertToElement() {
+        if (this.active) {
+            state.elements.database.push(new Element(this.coordinates.topLeftCorner, this.dimensions));
+            this.end();
+        }
     }
     display() {
         stroke(255);
