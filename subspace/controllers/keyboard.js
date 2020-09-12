@@ -6,8 +6,6 @@ function keyPressed() {
             } else {
                 state.cursor.createElement();
             }
-        break;
+            break;
     }
-    
-    
 }

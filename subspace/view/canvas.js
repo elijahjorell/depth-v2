@@ -1,5 +1,6 @@
 function setup() {
     const canvas = createCanvas(windowWidth, windowHeight);
+    canvas.parent('app');
 }
 
 function draw() {
