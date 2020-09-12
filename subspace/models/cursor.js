@@ -3,6 +3,6 @@ class Cursor {
         this.coordinate = undefined;
     }
     updateCoordinate() {
-        this.coordinate = new Coordinate(mouseX, mouseY)
+        this.coordinate = new Coordinate(mouseX, mouseY);
     }
 }

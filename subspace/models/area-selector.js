@@ -4,7 +4,7 @@ class AreaSelector {
         this.coordinates = {
             origin: undefined,
             topLeftCorner: undefined
-        }
+        };
         this.dimensions = undefined;
     }
     start() {
@@ -22,7 +22,7 @@ class AreaSelector {
         this.coordinates = {
             origin: undefined,
             topLeftCorner: undefined
-        }
+        };
         this.dimensions = undefined;
     }
     display() {
